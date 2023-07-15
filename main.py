@@ -1,6 +1,24 @@
 import utils
+from airflow import DAG
+from airflow.operators.python import PythonOperator
+import datetime
 
-def pass_rate_to_line():
+default_args = {
+'owner': 'admin',
+'email':"sayaka.yanagi@scskeu.com"
+}
 
-    # Get JPY exchange rate
-    utils.send_message()
+
+dag = DAG(
+    dag_id="sap-integration-daily-dag",    
+    schedule="0 18 * * *",
+    start_date=datetime.datetime(2023, 7, 15),
+    default_args=default_args,
+)
+
+
+task = PythonOperator(
+        task_id=f'exchange_rate_to_line',
+        python_callable= utils.pass_rate_to_line,
+        dag=dag,
+    )

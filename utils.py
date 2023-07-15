@@ -86,6 +86,7 @@ def send_message():
 
     if response.status_code != 200:
         print('Error in sending messages to LINE')
+        print(response.text)
     
 
 
