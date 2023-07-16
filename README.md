@@ -2,9 +2,13 @@
 
 An automated process to send the daily exchange rate of JPY (Japanese Yen) and GBP (Great Britain Pound) to LINE, a widely used messaging app in Japan, scheduled for 6 PM every day.
 
+![Exchange Rate](https://github.com/SayakaYanagi/Exchange_Rate/assets/72021349/d54cb2df-2902-4fce-8adc-35a518a6fcd4)
+
+
 ## Installation
 
 1. Get Credentials of LINE Messaging API and exchangerates API
+   
    Create an account in LINE, and set up a Messaging API channel on LINE Developer
    [LINE Divelopers Console website](https://developers.line.biz/console)
 
