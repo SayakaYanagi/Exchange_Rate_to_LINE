@@ -19,6 +19,6 @@ dag = DAG(
 
 task = PythonOperator(
         task_id=f'exchange_rate_to_line',
-        python_callable= utils.pass_rate_to_line,
+        python_callable= utils.send_message,
         dag=dag,
     )
