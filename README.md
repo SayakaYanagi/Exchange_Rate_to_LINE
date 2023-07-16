@@ -11,8 +11,8 @@ An automated process to send the daily exchange rate of JPY (Japanese Yen) and G
    Get API key on exchangerates
    [exchangerates website](https://exchangeratesapi.io/)
 
-4. Fill in the credentials in .env file
-   LINE_CHANNEL_ACCESS_TOKEN : Channel access token of your LINE messaging channel
-   USER_ID : User ID of your LINE messaging channel
-   EXCHANGE_RATE_API_KEY : API key of your exchangerates account
+2. Fill in the credentials in .env file
+   - LINE_CHANNEL_ACCESS_TOKEN : Channel access token of your LINE messaging channel
+   - USER_ID : User ID of your LINE messaging channel
+   - EXCHANGE_RATE_API_KEY : API key of your exchangerates account
    
