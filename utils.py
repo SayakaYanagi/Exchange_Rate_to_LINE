@@ -7,7 +7,7 @@ import logging
 
 # Logging setting
 logger = logging.getLogger()
-logger.setLevel(40)
+logger.setLevel(20)
 fhandler = logging.FileHandler(filename=r'/Users/sayaka/airflow/dags/Exchange_Rate/main.log')
 formatter = logging.Formatter('%(asctime)s - %(message)s')
 
@@ -36,12 +36,11 @@ def get_rate():
     Get JPY exchange rate of 1 GBP
     """
     api_key = get_api_key()
-    print(api_key)
     req = f'https://v6.exchangerate-api.com/v6/{api_key}/latest/GBP'
 
     try:
         logging.info('Sending HTTP request to exchange rate API...')
-        response = requests.get(req)
+        response = requests.get(req, timeout = 10)
         jpy = response.json()['conversion_rates']['JPY']
         return jpy
     except Exception as e:
