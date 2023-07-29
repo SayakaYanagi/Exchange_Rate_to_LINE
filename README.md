@@ -1,4 +1,4 @@
-# Exchange_Rate
+# Exchange_Rate_to_LINE
 
 ## List of Content
 1. [Project](#project)  
