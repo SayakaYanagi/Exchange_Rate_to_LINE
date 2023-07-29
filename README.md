@@ -21,4 +21,7 @@ An automated process to send the daily exchange rate of JPY (Japanese Yen) and G
    - LINE_CHANNEL_ACCESS_TOKEN : Channel access token of your LINE messaging channel
    - USER_ID : User ID of your LINE messaging channel
    - EXCHANGE_RATE_API_KEY : API key of your exchangerates account
+  
+4. Change the directory of log file to the one you prefer in utils.py (line 11).
+   
    
