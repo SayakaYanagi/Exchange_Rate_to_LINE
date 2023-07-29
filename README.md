@@ -1,15 +1,23 @@
 # Exchange_Rate
 
-An automated process to send the daily exchange rate of JPY (Japanese Yen) and GBP (Great Britain Pound) to LINE, a widely used messaging app in Japan, scheduled for 6 PM every day.
+## List of Content
+1. [Project](#project)  
+1. [Installation](#installation)
+
+
+## Project
+
+An automated process to send the daily exchange rate of JPY (Japanese Yen) and GBP (Great Britain Pound) to LINE, a widely used messaging app in Japan, scheduled for 6 PM every day. The process is automated and monitored by Airflow. If any errors occur, an email alert is sent.
 
 ![Exchange Rate](https://github.com/SayakaYanagi/Exchange_Rate/assets/72021349/d54cb2df-2902-4fce-8adc-35a518a6fcd4)
+
 
 
 ## Installation
 
 0. Set up [Airflow](https://airflow.apache.org/docs/apache-airflow/stable/index.html)
 
-1. Clone this repository in dags folder set in airflow.cfg
+1. Clone this repository in your airflow dags folder.
 
 2. Get Credentials of LINE Messaging API and exchangerates API
    
@@ -21,7 +29,6 @@ An automated process to send the daily exchange rate of JPY (Japanese Yen) and G
    - LINE_CHANNEL_ACCESS_TOKEN : Channel access token of your LINE messaging channel
    - USER_ID : User ID of your LINE messaging channel
    - EXCHANGE_RATE_API_KEY : API key of your exchangerates account
-  
-4. Change the directory of log file to the one you prefer in utils.py (line 11).
-   
-   
+
+4. Use `pip install -r requirements.txt` to install modules.
+ 
