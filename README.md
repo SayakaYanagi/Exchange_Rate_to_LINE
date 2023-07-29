@@ -7,7 +7,10 @@
 
 ## Project
 
-An automated process to send the daily exchange rate of JPY (Japanese Yen) and GBP (Great Britain Pound) to LINE, a widely used messaging app in Japan, scheduled for 6 PM every day. The process is automated and monitored by Airflow. If any errors occur, an email alert is sent.
+An automated process to send the daily exchange rate of JPY (Japanese Yen) and GBP (Great Britain Pound) to LINE, a widely used messaging app in Japan, scheduled for 6 PM every day.   
+
+The currency exchange rate is obtained by sending an HTTP request to exchangerates API.
+The process is automated and monitored by Airflow. If any errors occur, an email alert is sent.
 
 ![Exchange Rate](https://github.com/SayakaYanagi/Exchange_Rate/assets/72021349/d54cb2df-2902-4fce-8adc-35a518a6fcd4)
 
