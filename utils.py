@@ -7,11 +7,19 @@ import logging
 
 # Logging setting
 logger = logging.getLogger()
-logger.setLevel(20)
-fhandler = logging.FileHandler(filename=r'Exchange_Rate_to_LINE/main.log')
+logger.setLevel(logging.INFO)
+fhandler = logging.FileHandler(filename=r'logs/main.log')
 formatter = logging.Formatter('%(asctime)s - %(message)s')
 
 load_dotenv()
+
+def get_default_args(user):
+
+    default_args = {
+        'owner': os.environ['OWNER']
+    }
+
+    return default_args
 
 def get_api_key():
 
