@@ -8,7 +8,7 @@ import logging
 # Logging setting
 logger = logging.getLogger()
 logger.setLevel(20)
-fhandler = logging.FileHandler(filename=r'/Users/sayaka/airflow/dags/Exchange_Rate/main.log')
+fhandler = logging.FileHandler(filename=r'Exchange_Rate_to_LINE/main.log')
 formatter = logging.Formatter('%(asctime)s - %(message)s')
 
 load_dotenv()
