@@ -16,10 +16,10 @@ The process is automated and monitored by Airflow. If any errors occur, an email
 ![Exchange Rate](https://github.com/SayakaYanagi/Exchange_Rate/assets/72021349/d54cb2df-2902-4fce-8adc-35a518a6fcd4)
 
 
-
 ## Installation
 
 0. Set up [Airflow](https://airflow.apache.org/docs/apache-airflow/stable/index.html)
+
 
 1. Clone this repository in your airflow dags folder.
 
@@ -33,6 +33,6 @@ The process is automated and monitored by Airflow. If any errors occur, an email
    - LINE_CHANNEL_ACCESS_TOKEN : Channel access token of your LINE messaging channel
    - USER_ID : User ID of your LINE messaging channel
    - EXCHANGE_RATE_API_KEY : API key of your Exchange Rates account
+   - OWNER : Your Airflow user name
 
 4. Use `pip install -r requirements.txt` to install modules.
- 
