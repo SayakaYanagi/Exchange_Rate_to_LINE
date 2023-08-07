@@ -2,8 +2,11 @@ from Exchange_Rate_to_LINE import utils
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 import datetime
+import logging
 
-default_args = utils.get_default_args
+logger = logging.getLogger()
+
+default_args = utils.get_default_args()
 
 dag = DAG(
     dag_id="exchange-rate-to-line",    
@@ -17,4 +20,6 @@ task = PythonOperator(
         task_id=f'send-message-to-LINE',
         python_callable= utils.send_message,
         dag=dag,
+        email_on_failure=True,
+        email=['***@gmail.com']
     )
