@@ -43,13 +43,14 @@ def get_rate():
     api_key = get_api_key()
     req = f'https://v6.exchangerate-api.com/v6/{api_key}/latest/GBP'
 
-    try:
-        logger.info('Sending HTTP request to exchange rate API...')
-        response = requests.get(req, timeout = 10)
+
+    logger.info('Sending HTTP request to exchange rate API...')
+    response = requests.get(req, timeout = 10)
+    if response.status_code == 200:
         jpy = response.json()['conversion_rates']['JPY']
         return jpy
-    except Exception as e:
-        logger.error(f'Error in get_rate(). {type(e)} : {e}')
+    else:
+        logger.error(f"Error in API request to Exchange Rate API. <{response.status_code}> {response.json()['error-type']}")
         raise
 
 def get_line_credentials():
