@@ -9,11 +9,12 @@
 
 An automated process to send the daily exchange rate of JPY (Japanese Yen) and GBP (Great Britain Pound) to LINE, a widely used messaging app in Japan, scheduled for 6 PM every day.   
 
-The currency exchange rate is obtained by sending an HTTP request to Exchange Rates API.
+The currency exchange rate is obtained by sending an HTTP request to ExchangeRate-API.
 The process is automated and monitored by Airflow. If any errors occur, an email alert is sent.
 
 
-![Exchange Rate](https://github.com/SayakaYanagi/Exchange_Rate/assets/72021349/d54cb2df-2902-4fce-8adc-35a518a6fcd4)
+![Exchange Rate](https://github.com/SayakaYanagi/Exchange_Rate_to_LINE/assets/72021349/b8b6ab43-d01f-4e25-8688-5bdfe38138ee)
+
 
 
 ## Installation
@@ -27,7 +28,7 @@ The process is automated and monitored by Airflow. If any errors occur, an email
    
    1. Create an account in LINE, and set up a Messaging API channel on [LINE Developer](https://developers.line.biz/console)
 
-   1. Get API key on [Exchange Rates](https://exchangeratesapi.io/)
+   1. Get API key on [ExchangeRate-API](https://www.exchangerate-api.com/)
 
 3. Fill in the credentials in `.env `
    - LINE_CHANNEL_ACCESS_TOKEN : Channel access token of your LINE messaging channel
