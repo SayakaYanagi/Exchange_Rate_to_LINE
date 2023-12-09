@@ -3,6 +3,7 @@
 ## List of Content
 1. [Project](#project)  
 1. [Installation](#installation)
+1. [Result](#result)
 
 
 ## Project
@@ -33,7 +34,13 @@ The process is automated and monitored by Airflow. If any errors occur, an email
 3. Fill in the credentials in `.env `
    - LINE_CHANNEL_ACCESS_TOKEN : Channel access token of your LINE messaging channel
    - USER_ID : User ID of your LINE messaging channel
-   - EXCHANGE_RATE_API_KEY : API key of your Exchange Rates account
+   - EXCHANGE_RATE_API_KEY : API key of your ExchangeRates-API account
    - OWNER : Your Airflow user name
 
 4. Use `pip install -r requirements.txt` to install modules.
+
+
+## Result
+
+Here's an example of LINE chat screen of Exchange Rate app.
+![LINE chat screen of Exchange Rate app](https://github.com/SayakaYanagi/Exchange_Rate_to_LINE/assets/72021349/dc964952-d0a6-4cce-ac4c-91b13d588a04)
